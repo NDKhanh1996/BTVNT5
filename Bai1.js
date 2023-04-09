@@ -3,19 +3,17 @@
 // n = 2: output = [ [1,2], [3,4], [5] ]
 // n = 3: output = [ [1,2,3], [4,5] ]
 // n = 4: output = [ [1,2,3,4], [5] ]
-// let inputArr: number[] = [1,2,3,4,5]
-// let inputN: number = 2
-// let arr: number[][] = []
-// let a: number = 0
-//  for (let i = 0; i <inputArr.length / inputN ; i++) {
-//     let temp: number[] = []
-//     for (let j = 0; j < inputN ; j++) {
-//         temp[j] = inputArr[j + a]
-//     }
-//     arr.push(temp)
-//     a += inputN
-// }
-// console.log(arr)
-var a = [1, 2, undefined];
-var b = a.filter(function (item) { return item !== undefined; });
-console.log(b);
+var inputArr = [1, 2, 3, 4, 5];
+var inputN = 4;
+var arr = [];
+var a = 0;
+for (var i = 0; i < inputArr.length / inputN; i++) {
+    var temp = [];
+    for (var j = 0; j < inputN; j++) {
+        temp[j] = inputArr[j + a];
+    }
+    var temp1 = temp.filter(function (i) { return i !== undefined; });
+    arr.push(temp1);
+    a += inputN;
+}
+console.log(arr);
