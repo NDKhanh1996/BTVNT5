@@ -12,8 +12,8 @@ for (var i = 0; i < inputArr.length / inputN; i++) {
     for (var j = 0; j < inputN; j++) {
         temp[j] = inputArr[j + a];
     }
-    var temp1 = temp.filter(function (i) { return i !== undefined; });
-    arr.push(temp1);
+    temp = temp.filter(function (i) { return i !== undefined; });
+    arr.push(temp);
     a += inputN;
 }
 console.log(arr);
