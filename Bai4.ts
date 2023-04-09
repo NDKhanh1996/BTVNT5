@@ -11,10 +11,10 @@ function check(input: number) {
         sum += array[i]
     }
     if (sum === input) {
-        console.log(`${input} is perfect number`)
+        return (`${input} is perfect number`)
     } else {
-        console.log(`${input} is not perfect number`)
+        return (`${input} is not perfect number`)
     }
 }
 
-check(8128)
+console.log(check(8128))
